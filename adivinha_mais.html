@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>adivinha_mais</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<input type="text" id="numero"/>
+		<input type="submit" value="Compare com o meu segredo!" id="adivinhar"/>
+		<script>
+			var caixaDoNumero = document.getElementById("numero"),
+				botaoAdivinhar = document.getElementById("adivinhar"),
+				segredo = Math.round(Math.random()*10);
+						
+			function botaoClicado(){
+				if(segredo == caixaDoNumero.value){
+					alert("Parabéns! Você acertou o número secreto");
+				}else{
+					alert("Infelizmente você errou!");
+				}
+				caixaDoNumero.value = "";
+			}
+			
+			botaoAdivinhar.onclick = botaoClicado;
+		</script>
+	</body>
+</html>
