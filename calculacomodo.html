@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+        let comodo, largura, comprimento, area, condicao, vtotal = 0;//valor residencial
+
+        do {
+            comodo = prompt("comodo");
+            largura = Number(prompt("largura"));
+            comprimento = Number(prompt("comprimento"));
+
+            area = (largura * comprimento);
+            vtotal += area;
+
+            alert("comodo:" + comodo + " " + "area:" + area);
+
+            condicao = prompt("continuar calculando: (s|n)");
+        } while (condicao != "n");
+
+        alert("valor total da area residencial:" + vtotal);
+</script>
+<body>
+    
+</body>
+</html>
