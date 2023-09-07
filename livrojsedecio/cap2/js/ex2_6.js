@@ -6,5 +6,9 @@ function mostrarCobranca(){
     let valor = Number(inValor.value);
     let tempo = Number(inTempoUso.value);
 
-    //let valorPagar = Math.round(tempo/15);
+    let valorPagar = Math.ceil(tempo/15)*valor;
+	
+	outValor.textContent = `Valor a pagar R$: ${valorPagar},00`;
 }
+let btCalcular = document.getElementById("btCalcular");
+btCalcular.addEventListener("click", mostrarCobranca);
